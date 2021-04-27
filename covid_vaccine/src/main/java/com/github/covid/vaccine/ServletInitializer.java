@@ -1,4 +1,4 @@
-package com.github.covid.vaccine.covid_vaccine;
+package com.github.covid.vaccine;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
