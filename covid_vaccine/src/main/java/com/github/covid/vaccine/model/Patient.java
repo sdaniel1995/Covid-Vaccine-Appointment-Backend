@@ -1,6 +1,15 @@
 package com.github.covid.vaccine.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "Patients")
 public class Patient {
+    @Id
+    @GeneratedValue
     private Integer id; 
     private String firstName; 
     private String lastName; 
