@@ -1,23 +1,33 @@
 package com.github.covid.vaccine.model;
 
 public class VaccineDistributor {
-    private String distributorName; 
+    private int id; 
+    private String distributor; 
     private String location;
     
     public VaccineDistributor() {
     }
 
-    public VaccineDistributor(String distributorName, String location) {
-        this.distributorName = distributorName;
+    public VaccineDistributor(int id, String distributor, String location) {
+        this.id = id;
+        this.distributor = distributor;
         this.location = location;
     }
 
-    public String getDistributorName() {
-        return distributorName;
+    public int getId() {
+        return id;
     }
 
-    public void setDistributorName(String distributorName) {
-        this.distributorName = distributorName;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDistributor() {
+        return distributor;
+    }
+
+    public void setDistributor(String distributor) {
+        this.distributor = distributor;
     }
 
     public String getLocation() {
@@ -30,7 +40,8 @@ public class VaccineDistributor {
 
     @Override
     public String toString() {
-        return "VaccineDistributor [distributorName=" + distributorName + ", location=" + location + "]";
-    } 
+        return "VaccineDistributor [distributor=" + distributor + ", id=" + id + ", location=" + location + "]";
+    }
+
     
 }
