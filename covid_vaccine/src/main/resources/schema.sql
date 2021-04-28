@@ -1,3 +1,1 @@
-CREATE TABLE Patients (
-    id
-)
+
