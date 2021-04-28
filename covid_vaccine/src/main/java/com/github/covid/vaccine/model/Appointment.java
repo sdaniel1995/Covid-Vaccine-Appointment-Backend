@@ -1,20 +1,22 @@
 package com.github.covid.vaccine.model;
 
+import java.sql.Date;
+
 public class Appointment {
 
-    private int id; 
-    private int patient_id; 
-    private int vaccineDistributor_id;
-    private String timeDate;
+    private int id;
+    private Date date;
+    private Patient patient;
+    private VaccineDistributor distributor;
 
     public Appointment() {
     }
 
-    public Appointment(int id, int patient, int vaccineDistributor, String timeDate) {
+    public Appointment(int id, Date date, Patient patient, VaccineDistributor distributor) {
         this.id = id;
-        this.patient_id = patient;
-        this.vaccineDistributor_id = vaccineDistributor;
-        this.timeDate = timeDate;
+        this.date = date;
+        this.patient = patient;
+        this.distributor = distributor;
     }
 
     public int getId() {
@@ -25,34 +27,35 @@ public class Appointment {
         this.id = id;
     }
 
-    public int getPatient() {
-        return patient_id;
+    public Date getDate() {
+        return date;
     }
 
-    public void setPatient(int patient) {
-        this.patient_id = patient;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public int getVaccineDistributor() {
-        return vaccineDistributor_id;
+    public Patient getPatient() {
+        return patient;
     }
 
-    public void setVaccineDistributor(int vaccineDistributor) {
-        this.vaccineDistributor_id = vaccineDistributor;
+    public void setPatient(Patient patient) {
+        this.patient = patient;
     }
 
-    public String getTimeDate() {
-        return timeDate;
+    public VaccineDistributor getDistributor() {
+        return distributor;
     }
 
-    public void setTimeDate(String timeDate) {
-        this.timeDate = timeDate;
+    public void setDistributor(VaccineDistributor distributor) {
+        this.distributor = distributor;
     }
 
     @Override
     public String toString() {
-        return "Appointment [id=" + id + ", patient_id=" + patient_id + ", timeDate=" + timeDate
-                + ", vaccineDistributor_id=" + vaccineDistributor_id + "]";
+        return "Appointment [date=" + date + ", distributor=" + distributor + ", id=" + id + ", patient=" + patient
+                + "]";
     }
 
+    
 }

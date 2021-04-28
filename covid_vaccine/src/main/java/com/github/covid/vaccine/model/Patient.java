@@ -1,54 +1,66 @@
 package com.github.covid.vaccine.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "Patients")
 public class Patient {
-    @Id
-    @GeneratedValue
-    private Integer id; 
-    private String firstName; 
-    private String lastName; 
+
+    private int id; 
+    private String fname; 
+    private String lname;
+    private int age;
+    private String sex; 
     private String username; 
-    private String password;
+    private String pass;
     
     public Patient() {
     }
 
-    public Patient(Integer id, String firstName, String lastName, String username, String password) {
+    public Patient(int id, String fname, String lname, int age, String sex, String username, String pass) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.fname = fname;
+        this.lname = lname;
+        this.age = age;
+        this.sex = sex;
         this.username = username;
-        this.password = password;
+        this.pass = pass;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getFname() {
+        return fname;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setFname(String fname) {
+        this.fname = fname;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getLname() {
+        return lname;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     public String getUsername() {
@@ -59,17 +71,19 @@ public class Patient {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPass() {
+        return pass;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
     @Override
     public String toString() {
-        return "Patient [firstName=" + firstName + ", id=" + id + ", lastName=" + lastName + ", password=" + password
-                + ", username=" + username + "]";
+        return "Patient [age=" + age + ", fname=" + fname + ", id=" + id + ", lname=" + lname + ", pass=" + pass
+                + ", sex=" + sex + ", username=" + username + "]";
     }
+
+    
 }
