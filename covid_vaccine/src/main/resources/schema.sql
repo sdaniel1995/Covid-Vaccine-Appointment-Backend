@@ -21,6 +21,6 @@ CREATE TABLE vaccineDistributor (
 CREATE TABLE appointments (
     appt_id serial primary key, 
     patient_id integer references patients(patients_id),
-    vaccineDistributor_id integer references vaccineDistributor(distributor_id,
+    vaccineDistributor_id integer references vaccineDistributor(distributor_id),
     appt_date date not null
  );
