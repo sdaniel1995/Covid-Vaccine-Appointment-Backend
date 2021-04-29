@@ -39,7 +39,7 @@ public class PatientController {
         return pService.getPatientById(id);
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deletePatient/{id}")
     public String delete(@PathVariable int id) {
         return pService.removePatient(id);
     }

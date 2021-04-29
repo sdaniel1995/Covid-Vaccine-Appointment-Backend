@@ -13,7 +13,7 @@ public class AppointmentService {
     @Autowired
     private AppointmentsRepository aRepository;
 
-    public Appointment creatAppointment(Appointment appointment) {
+    public Appointment createAppointment(Appointment appointment) {
         return aRepository.save(appointment);
     }
 

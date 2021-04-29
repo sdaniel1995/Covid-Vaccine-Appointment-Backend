@@ -20,7 +20,7 @@ public class AppointmentController {
 
     @PostMapping("/createAppointment")
     public Appointment newAppointment(@RequestBody Appointment appointment) {
-        return aService.creatAppointment(appointment);
+        return aService.createAppointment(appointment);
     }
 
     @PostMapping("/createAppointments")
@@ -33,7 +33,7 @@ public class AppointmentController {
         return aService.getAppointments();
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/deleteAppointment/{id}")
     public String delete(@PathVariable int id) {
         return aService.cancelAppointment(id);
     }

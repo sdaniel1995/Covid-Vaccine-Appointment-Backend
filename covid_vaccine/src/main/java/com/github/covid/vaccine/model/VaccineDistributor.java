@@ -1,5 +1,6 @@
 package com.github.covid.vaccine.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,11 +13,23 @@ public class VaccineDistributor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer distributor_id;
+
+    @Column(nullable = false)
     private String distributor_name;
+
+    @Column(nullable = false)
     private String pass;
+
+    @Column(nullable = false)
     private String location_address;
+
+    @Column(nullable = false)
     private String city;
+
+    @Column(nullable = false)
     private String countryState;
+
+    @Column(nullable = false)
     private Integer zipcode;
 
     public VaccineDistributor() {
