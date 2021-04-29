@@ -13,38 +13,34 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 public class PatientController {
     @Autowired
-    private PatientService service;
+    private PatientService pService;
 
     @PostMapping("/addPatient")
     public Patient addPatient(@RequestBody Patient patient) {
-        return service.insertPatient(patient);
+        return pService.insertPatient(patient);
     }
 
     @PostMapping("/addPatients")
-    public List<Patient> addPatients(@RequestBody List<Patient> patient) {
-        return service.insertPatients(patient);
+    public List<Patient> addPatients(@RequestBody List<Patient> patients) {
+        return pService.insertPatients(patients);
     }
 
     @GetMapping("/patients")
     public List<Patient> findAllPatients() {
-        return service.getPatients();
+        return pService.getPatients();
     }
 
     @GetMapping("/patient/{id}")
     public Patient findPatientById(@PathVariable int id) {
-        return service.getPatientById(id);
-    }
-
-    @GetMapping("/patient/{name}")
-    public Patient findPatientByName(@PathVariable String name) {
-        return service.getPatientByName(name);
+        return pService.getPatientById(id);
     }
 
     @DeleteMapping("/delete/{id}")
     public String delete(@PathVariable int id) {
-        return service.removePatient(id);
+        return pService.removePatient(id);
     }
 }

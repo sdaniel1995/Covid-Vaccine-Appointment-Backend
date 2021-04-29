@@ -11,10 +11,10 @@ import javax.persistence.Table;
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id; 
+    private Integer id; 
     private String fname; 
     private String lname;
-    private int age;
+    private Integer age;
     private String sex; 
     private String username; 
     private String pass;

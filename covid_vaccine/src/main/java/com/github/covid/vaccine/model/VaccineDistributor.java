@@ -11,13 +11,13 @@ import javax.persistence.Table;
 public class VaccineDistributor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int distributor_id;
+    private Integer distributor_id;
     private String distributor_name;
     private String pass;
     private String location_address;
     private String city;
     private String countryState;
-    private int zipcode;
+    private Integer zipcode;
 
     public VaccineDistributor() {
     }

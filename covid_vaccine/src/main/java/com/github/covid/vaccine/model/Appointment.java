@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private Date date;
     @OneToOne
     @JoinColumn(name = "patients_id")

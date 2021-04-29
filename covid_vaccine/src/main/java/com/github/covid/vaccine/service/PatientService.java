@@ -11,30 +11,26 @@ import org.springframework.stereotype.Service;
 @Service
 public class PatientService {
     @Autowired
-    private PatientRepository repository;
+    private PatientRepository pRepository;
 
     public Patient insertPatient(Patient patient) {
-       return repository.save(patient);
+       return pRepository.save(patient);
     }
 
-    public List<Patient> insertPatients(List<Patient> patient) {
-        return repository.saveAll(patient);
+    public List<Patient> insertPatients(List<Patient> patients) {
+        return pRepository.saveAll(patients);
     }
 
     public List<Patient> getPatients() {
-        return repository.findAll();
+        return pRepository.findAll();
     }
 
     public Patient getPatientById(int id) {
-        return repository.findById(id).orElse(null);
-    }
-
-    public Patient getPatientByName(String firstName) {
-        return repository.findByfname(firstName);
+        return pRepository.findById(id).orElse(null);
     }
 
     public String removePatient(int id) {
-        repository.deleteById(id);
+        pRepository.deleteById(id);
         return "Patient with ID: " + id + " has been removed";
     }
 }
