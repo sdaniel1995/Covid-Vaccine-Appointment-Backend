@@ -1,6 +1,16 @@
 package com.github.covid.vaccine.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "vaccineDistributor")
 public class VaccineDistributor {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int distributor_id;
     private String distributor_name;
     private String pass;

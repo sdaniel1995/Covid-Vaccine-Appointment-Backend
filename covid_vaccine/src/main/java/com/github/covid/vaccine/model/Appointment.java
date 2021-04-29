@@ -2,11 +2,26 @@ package com.github.covid.vaccine.model;
 
 import java.sql.Date;
 
-public class Appointment {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "appointments")
+public class Appointment {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private Date date;
+    @OneToOne
+    @JoinColumn(name = "patients_id")
     private Patient patient;
+    @OneToOne
+    @JoinColumn(name = "distributor_id")
     private VaccineDistributor distributor;
 
     public Appointment() {

@@ -30,7 +30,7 @@ public class PatientService {
     }
 
     public Patient getPatientByName(String firstName) {
-        return repository.findByFirstName(firstName);
+        return repository.findByfname(firstName);
     }
 
     public String removePatient(int id) {
