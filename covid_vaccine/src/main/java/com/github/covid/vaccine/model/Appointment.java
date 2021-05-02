@@ -17,6 +17,7 @@ import javax.persistence.Table;
 public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Integer id;
 
     @Column(nullable = false)
@@ -24,27 +25,28 @@ public class Appointment {
 
     @OneToOne
     @JoinColumn(name = "patients_id")
+    @Column
     private Patient patient;
     
     @OneToOne
     @JoinColumn(name = "distributor_id")
+    @Column
     private VaccineDistributor distributor;
 
     public Appointment() {
     }
 
-    public Appointment(int id, Date date, Patient patient, VaccineDistributor distributor) {
-        this.id = id;
+    public Appointment(Date date, Patient patient, VaccineDistributor distributor) {
         this.date = date;
         this.patient = patient;
         this.distributor = distributor;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

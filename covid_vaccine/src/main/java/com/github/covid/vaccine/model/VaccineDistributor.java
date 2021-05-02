@@ -12,16 +12,17 @@ import javax.persistence.Table;
 public class VaccineDistributor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer distributor_id;
+    @Column
+    private Integer distributorId;
 
-    @Column(nullable = false)
-    private String distributor_name;
+    @Column(name = "distributor", nullable = false)
+    private String distributorName;
 
-    @Column(nullable = false)
+    @Column(name = "password", nullable = false)
     private String pass;
 
     @Column(nullable = false)
-    private String location_address;
+    private String address;
 
     @Column(nullable = false)
     private String city;
@@ -35,31 +36,30 @@ public class VaccineDistributor {
     public VaccineDistributor() {
     }
 
-    public VaccineDistributor(int distributor_id, String distributor_name, String pass, String location_address,
-            String city, String countryState, int zipcode) {
-        this.distributor_id = distributor_id;
-        this.distributor_name = distributor_name;
+    public VaccineDistributor(String distributorName, String pass, String address, String city,
+            String countryState, int zipcode) {
+        this.distributorName = distributorName;
         this.pass = pass;
-        this.location_address = location_address;
+        this.address = address;
         this.city = city;
         this.countryState = countryState;
         this.zipcode = zipcode;
     }
 
-    public int getDistributor_id() {
-        return distributor_id;
+    public Integer getDistributorId() {
+        return distributorId;
     }
 
-    public void setDistributor_id(int distributor_id) {
-        this.distributor_id = distributor_id;
+    public void setDistributorId(Integer distributorId) {
+        this.distributorId = distributorId;
     }
 
-    public String getDistributor_name() {
-        return distributor_name;
+    public String getDistributorName() {
+        return distributorName;
     }
 
-    public void setDistributor_name(String distributor_name) {
-        this.distributor_name = distributor_name;
+    public void setDistributorName(String distributorName) {
+        this.distributorName = distributorName;
     }
 
     public String getPass() {
@@ -70,12 +70,12 @@ public class VaccineDistributor {
         this.pass = pass;
     }
 
-    public String getLocation_address() {
-        return location_address;
+    public String getAddress() {
+        return address;
     }
 
-    public void setLocation_address(String location_address) {
-        this.location_address = location_address;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getCity() {
@@ -105,7 +105,7 @@ public class VaccineDistributor {
     @Override
     public String toString() {
         return "VaccineDistributor [city=" + city + ", countryState=" + countryState + ", distributor_id="
-                + distributor_id + ", distributor_name=" + distributor_name + ", location_address=" + location_address
+                + distributorId + ", distributor_name=" + distributorName + ", location_address=" + address
                 + ", pass=" + pass + ", zipcode=" + zipcode + "]";
     }
 
