@@ -12,6 +12,7 @@ import javax.persistence.Table;
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Integer id; 
 
     @Column(nullable = false)
@@ -29,14 +30,13 @@ public class Patient {
     @Column(nullable = false)
     private String username; 
 
-    @Column(nullable = false)
+    @Column(name = "password", nullable = false)
     private String pass;
     
     public Patient() {
     }
 
-    public Patient(int id, String fname, String lname, int age, String sex, String username, String pass) {
-        this.id = id;
+    public Patient(String fname, String lname, int age, String sex, String username, String pass) {
         this.fname = fname;
         this.lname = lname;
         this.age = age;
@@ -45,11 +45,11 @@ public class Patient {
         this.pass = pass;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

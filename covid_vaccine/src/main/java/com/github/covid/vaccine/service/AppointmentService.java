@@ -2,6 +2,8 @@ package com.github.covid.vaccine.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import com.github.covid.vaccine.model.Appointment;
 import com.github.covid.vaccine.repository.AppointmentsRepository;
 
@@ -13,6 +15,7 @@ public class AppointmentService {
     @Autowired
     private AppointmentsRepository aRepository;
 
+    @Transactional
     public Appointment createAppointment(Appointment appointment) {
         return aRepository.save(appointment);
     }

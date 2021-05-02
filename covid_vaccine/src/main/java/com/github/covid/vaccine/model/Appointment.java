@@ -1,6 +1,6 @@
 package com.github.covid.vaccine.model;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -17,6 +17,7 @@ import javax.persistence.Table;
 public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Integer id;
 
     @Column(nullable = false)
@@ -24,27 +25,28 @@ public class Appointment {
 
     @OneToOne
     @JoinColumn(name = "patients_id")
+    @Column
     private Patient patient;
     
     @OneToOne
     @JoinColumn(name = "distributor_id")
+    @Column
     private VaccineDistributor distributor;
 
     public Appointment() {
     }
 
-    public Appointment(int id, Date date, Patient patient, VaccineDistributor distributor) {
-        this.id = id;
+    public Appointment(Date date, Patient patient, VaccineDistributor distributor) {
         this.date = date;
         this.patient = patient;
         this.distributor = distributor;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -76,50 +78,5 @@ public class Appointment {
     public String toString() {
         return "Appointment [date=" + date + ", distributor=" + distributor + ", id=" + id + ", patient=" + patient
                 + "]";
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((date == null) ? 0 : date.hashCode());
-        result = prime * result + ((distributor == null) ? 0 : distributor.hashCode());
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
-        result = prime * result + ((patient == null) ? 0 : patient.hashCode());
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Appointment other = (Appointment) obj;
-        if (date == null) {
-            if (other.date != null)
-                return false;
-        } else if (!date.equals(other.date))
-            return false;
-        if (distributor == null) {
-            if (other.distributor != null)
-                return false;
-        } else if (!distributor.equals(other.distributor))
-            return false;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
-        if (patient == null) {
-            if (other.patient != null)
-                return false;
-        } else if (!patient.equals(other.patient))
-            return false;
-        return true;
-    }
-
-    
+    }    
 }
