@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pantry Landing Page</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!-- NavigationBar Component width:100% height:content -->
+		<div class="navbar bg-dark navbar-dark fixed-top">
+            <a class="navbar-brand float-left" href="#">Logo</a>
+            <a class="btn btn-light float-right" href="#">Logout</a>
+        </div>
+        <div style="height:6.5ch;"></div>
+
+		<!-- LoginPage Component width:100% height:content -->
+		<div class="container-sm p-3 border">
+            <h2 class="pb-3">Enter Login Information</h2>
+            <form action="Login" method="POST">
+                <!-- FormInputGroup inputName="username", inputType="text", labelText="Username" -->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" name="username" placeholder="Enter Username" required />
+                </div>
+                <!-- FormInputGroup inputName="userpass", inputType="password", labelText="Password" -->
+                <div class="form-group">
+                    <label for="userpass">Password</label>
+                    <input type="password" class="form-control" name="userpass" placeholder="Enter Password" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+		</div>
+
+		<!-- NewUserPage Component width:100% height:content -->
+		<div class="container-sm p-3 border">
+            <h2 class="pb-3">Please Fill All Fields</h2>
+			<form action="NewUser" method="POST">
+                <!-- FormSelectUserType inputName="usertype" -->
+                <div class="form-group">
+                    <label for="usertype">User Type</label>
+                    <select class="form-control" name="usertype" required>
+                        <option value="1">Patient</option>
+                        <option value="2">Distributor</option>
+                    </select>
+                </div>
+                <!-- FormInputGroup inputName="username", inputType="text", labelText="Username" -->
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" name="username" placeholder="Enter Username" required />
+                </div>
+                <!-- FormInputGroup inputName="userpass", inputType="password", labelText="Password" -->
+                <div class="form-group">
+                    <label for="userpass">Password</label>
+                    <input type="password" class="form-control" name="userpass" placeholder="Enter Password" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+		</div>
+
+        <!-- NewDistributorFinal Component width:100% height:content -->
+        <div class="container-sm p-3 border">
+            <h2 class="pb-3">Fill these fields to complete registration</h2>
+            <form action="" method="POST">
+                <input type="hidden" name="distributorId" value="" />
+                <!-- FormInputGroup inputName="distributorAddress", inputType="text", labelText="Street Address" -->
+                <div class="form-group">
+                    <label for="distributorAddress">Street Address</label>
+                    <input type="text" class="form-control" name="distributorAddress" placeholder="Enter Street Address" required />
+                </div>
+                <!-- FormInputGroup inputName="distributorCity", inputType="text", labelText="City" -->
+                <div class="form-group">
+                    <label for="distributorCity">City</label>
+                    <input type="text" class="form-control" name="distributorCity" placeholder="Enter City" required />
+                </div>
+                <!-- FormSelectState inputName="distributorState" -->
+                <div class="form-group">
+                    <label for="distributorState">State</label>
+                    <select name="distributorState" required>
+                        <option selected disabled>*Select a State</option>
+                        <option value="AL">Alabama</option>
+                        <option value="AK">Alaska</option>
+                        <option value="AZ">Arizona</option>
+                        <option value="AR">Arkansas</option>
+                        <option value="CA">California</option>
+                        <option value="CO">Colorado</option>
+                        <option value="CT">Connecticut</option>
+                        <option value="DE">Delaware</option>
+                        <option value="FL">Florida</option>
+                        <option value="GA">Georgia</option>
+                        <option value="HI">Hawaii</option>
+                        <option value="ID">Idaho</option>
+                        <option value="IL">Illinois</option>
+                        <option value="IN">Indiana</option>
+                        <option value="IA">Iowa</option>
+                        <option value="KS">Kansas</option>
+                        <option value="KY">Kentucky</option>
+                        <option value="LA">Louisiana</option>
+                        <option value="ME">Maine</option>
+                        <option value="MD">Maryland</option>
+                        <option value="MA">Massachusetts</option>
+                        <option value="MI">Michigan</option>
+                        <option value="MN">Minnesota</option>
+                        <option value="MS">Mississippi</option>
+                        <option value="MO">Missouri</option>
+                        <option value="MT">Montana</option>
+                        <option value="NE">Nebraska</option>
+                        <option value="NV">Nevada</option>
+                        <option value="NH">New Hampshire</option>
+                        <option value="NJ">New Jersey</option>
+                        <option value="NM">New Mexico</option>
+                        <option value="NY">New York</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ND">North Dakota</option>
+                        <option value="OH">Ohio</option>
+                        <option value="OK">Oklahoma</option>
+                        <option value="OR">Oregon</option>
+                        <option value="PA">Pennsylvania</option>
+                        <option value="RI">Rhode Island</option>
+                        <option value="SC">South Carolina</option>
+                        <option value="SD">South Dakota</option>
+                        <option value="TN">Tennessee</option>
+                        <option value="TX">Texas</option>
+                        <option value="UT">Utah</option>
+                        <option value="VT">Vermont</option>
+                        <option value="VA">Virginia</option>
+                        <option value="WA">Washington</option>
+                        <option value="WV">West Virginia</option>
+                        <option value="WI">Wisconsin</option>
+                        <option value="WY">Wyoming</option>
+                    </select>
+                </div>
+                <!-- FormInputZipCode inputName="distributorZip" -->
+                <div class="form-group">
+                    <label for="distributorZip">ZIP Code</label>
+                    <input type="number" min="1" max="99999" step="1" class="form-control" name="distributorZip" placeholder="Enter ZIP Code" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <!-- NewPatientFinal Component width:100% height:content -->
+        <div class="container-sm p-3 border">
+            <h2 class="pb-3">Fill these fields to complete registration</h2>
+            <form action="" method="POST">
+                <input type="hidden" name="patientId" value="" />
+                <!-- FormInputGroup inputName="patientFirstName", inputType="text", labelText="First Name" -->
+                <div class="form-group">
+                    <label for="patientFirstName">First Name</label>
+                    <input type="text" class="form-control" name="patientFirstName" placeholder="Enter First Name" required />
+                </div>
+                <!-- FormInputGroup inputName="patientLastName", inputType="text", labelText="Last Name" -->
+                <div class="form-group">
+                    <label for="patientLastName">Last Name</label>
+                    <input type="text" class="form-control" name="patientLastName" placeholder="Enter Last Name" required />
+                </div>
+                <!-- FormInputPatientAge inputName="patientAge" -->
+                <div class="form-group">
+                    <label for="patientAge">Age</label>
+                    <input type="number" min="1" max="125" step="1" class="form-control" name="patientAge" placeholder="Enter Age" required />
+                </div>
+                <!-- FormSelectPatientSex inputName="patientSex" -->
+                <div class="form-group">
+                    <label for="patientSex">Sex</label>
+                    <select name="patientSex" required>
+                        <option value="Female">Female</option>
+                        <option value="Male">Male</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+
+        <!-- UserOptions Component width:100% height:content -->
+        <div class="container-fluid p-3 border">
+            <!-- Distributor Links -->
+            <button class="btn btn-primary">Create Distribution Appointments</button>
+            <!-- Patient Links -->
+            <button class="btn btn-primary">Find an Appointment</button>
+        </div>
+
+		<!-- DistributorAppointmentsTable Component width:100% height:content -->
+		<div class="container-fluid p-3 border">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Appointment Date</th>
+                        <th colspan="2">Patient Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- DistributorAppointment Component appointmentDate="", patientName=null -->
+                    <tr>
+                        <td>MM/DD/YY H:MM AM/PM</td>
+                        <td class="text-muted">-Unfilled-</td>
+                        <td><button class="btn btn-danger">Cancel</button></td>
+                    </tr>
+                    <!-- DistributorAppointment Component appointmentDate="", patientName="Last, First" -->
+                    <tr>
+                        <td>MM/DD/YY H:MM AM/PM</td>
+                        <td class="text-body">Last, First</td>
+                        <td><button class="btn btn-secondary" disabled>Cancel</button></td>
+                    </tr>
+                    <!-- DistributorAppointment Component appointmentDate="", patientName=null -->
+                    <tr>
+                        <td>MM/DD/YY H:MM AM/PM</td>
+                        <td class="text-muted">-Unfilled-</td>
+                        <td><button class="btn btn-danger">Cancel</button></td>
+                    </tr>
+                    <!-- 1 Row for Every Existing Appointment -->
+                </tbody>
+            </table>
+        </div>
+
+		<!-- PatientAppointmentsTable Component width:100% height:content -->
+		<div class="container-fluid p-3 border">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Appointment Date</th>
+                        <th>Distributor Name</th>
+                        <th colspan="3">Distributor Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- PatientAppointment Component appointmentDate="", distributorName="", streetAddress="", cityAddress="" -->
+                    <tr>
+                        <td>MM/DD/YY H:MM AM/PM</td>
+                        <td>Grandview Medical Center</td>
+                        <td>1234 Street St</td>
+                        <td>City Town, CA 54321</td>
+                        <td><button class="btn btn-danger">Cancel</button></td>
+                    </tr>
+                    <!-- PatientAppointment Component appointmentDate="", distributorName="", streetAddress="", cityAddress="" -->
+                    <tr>
+                        <td>MM/DD/YY H:MM AM/PM</td>
+                        <td>Grandview Medical Center</td>
+                        <td>1234 Street St</td>
+                        <td>City Town, CA 54321</td>
+                        <td><button class="btn btn-danger">Cancel</button></td>
+                    </tr>
+                    <!-- PatientAppointment Component appointmentDate="", distributorName="", streetAddress="", cityAddress="" -->
+                    <tr>
+                        <td>MM/DD/YY H:MM AM/PM</td>
+                        <td>Grandview Medical Center</td>
+                        <td>1234 Street St</td>
+                        <td>City Town, CA 54321</td>
+                        <td><button class="btn btn-danger">Cancel</button></td>
+                    </tr>
+                    <!-- 1 Row for Every Existing Appointment -->
+                </tbody>
+            </table>
+        </div>
+
+		<!-- NewAppointmentsPage width:100% height:content -->
+		<div class="container-fluid p-3 border">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th colspan="2">Number of Vaccines</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="date" min="2021-05-03" required />
+                        </td>
+                        <td>
+                            <input type="number" step="1" min="1" required />
+                        </td>
+                        <td>
+                            <button class="btn btn-primary">Create</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-link" href="#">Return to Main Page</a>
+        </div>
+
+		<!-- FindAppointmentsTable width:100% height:content -->
+		<div class="container-fluid p-3 border">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Appointment Date</th>
+                        <th>Distributor Name</th>
+                        <th colspan="3">Distributor Address</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- FindAppointment Component appointmentDate="", distributorName="", streetAddress="", cityAddress="" -->
+                    <tr>
+                        <td>MM/DD/YY H:MM AM/PM</td>
+                        <td>Paradise Grove Clinic</td>
+                        <td>1234 Street St</td>
+                        <td>City Town, CA 54321</td>
+                        <td><button class="btn btn-primary">Claim</button></td>
+                    </tr>
+                    <!-- FindAppointment Component appointmentDate="", distributorName="", streetAddress="", cityAddress="" -->
+                    <tr>
+                        <td>MM/DD/YY H:MM AM/PM</td>
+                        <td>Paradise Grove Clinic</td>
+                        <td>1234 Street St</td>
+                        <td>City Town, CA 54321</td>
+                        <td><button class="btn btn-primary">Claim</button></td>
+                    </tr>
+                    <!-- FindAppointment Component appointmentDate="", distributorName="", streetAddress="", cityAddress="" -->
+                    <tr>
+                        <td>MM/DD/YY H:MM AM/PM</td>
+                        <td>Paradise Grove Clinic</td>
+                        <td>1234 Street St</td>
+                        <td>City Town, CA 54321</td>
+                        <td><button class="btn btn-primary">Claim</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-link" href="#">Return to Main Page</a>
+        </div>
+	</body>
+</html>
