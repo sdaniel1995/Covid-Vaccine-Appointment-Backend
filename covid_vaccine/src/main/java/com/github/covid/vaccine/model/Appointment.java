@@ -25,12 +25,10 @@ public class Appointment {
 
     @OneToOne
     @JoinColumn(name = "patients_id")
-    @Column
     private Patient patient;
     
     @OneToOne
     @JoinColumn(name = "distributor_id")
-    @Column
     private VaccineDistributor distributor;
 
     public Appointment() {
