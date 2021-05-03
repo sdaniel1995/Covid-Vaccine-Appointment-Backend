@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1680"
+   height="1050"
+   viewBox="0 0 444.49999 277.81251"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="Login_Page.svg">
+  <defs
+     id="defs2">
+    <rect
+       x="111.65416"
+       y="56.091667"
+       width="221.19167"
+       height="165.62916"
+       id="rect845" />
+    <rect
+       x="111.65416"
+       y="56.091667"
+       width="221.22201"
+       height="36.231463"
+       id="rect839" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.51585123"
+     inkscape:cx="871.78923"
+     inkscape:cy="539.12687"
+     inkscape:document-units="px"
+     inkscape:current-layer="g861"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#666666;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:9.6;paint-order:markers stroke fill"
+       id="rect833"
+       width="443.44168"
+       height="25.400003"
+       x="0.52916503"
+       y="0.52916503"
+       inkscape:label="nav" />
+    <g
+       id="g861"
+       inkscape:label="div">
+      <rect
+         style="fill:#999999;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:9.6;paint-order:markers stroke fill"
+         id="rect835"
+         width="221.19168"
+         height="165.62917"
+         x="111.65416"
+         y="56.091667"
+         inkscape:label="box"
+         rx="2.6458333"
+         ry="2.6458333" />
+      <text
+         xml:space="preserve"
+         id="text843"
+         style="font-size:19.7556px;line-height:1.25;font-family:'Eras Bold ITC';-inkscape-font-specification:'Eras Bold ITC';white-space:pre;shape-inside:url(#rect845);"
+         x="25.456556"
+         y="0"
+         transform="translate(-0.09163825,5.8208336)"
+         inkscape:label="h2"><tspan
+           x="195.37062"
+           y="73.886741"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.7556px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle">Login</tspan></tspan></text>
+      <g
+         id="g879"
+         inkscape:label="div">
+        <rect
+           style="fill:#cccccc;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:9.6;paint-order:markers stroke fill"
+           id="rect849"
+           width="210.60834"
+           height="20.108337"
+           x="116.94583"
+           y="106.3625"
+           inkscape:label="box" />
+        <text
+           xml:space="preserve"
+           style="font-size:10.5833px;line-height:1.25;font-family:'Eras Bold ITC';-inkscape-font-specification:'Eras Bold ITC';stroke-width:0.264583"
+           x="121.562"
+           y="120.13995"
+           id="text865"
+           inkscape:label="label"><tspan
+             sodipodi:role="line"
+             id="tspan863"
+             x="121.562"
+             y="120.13995"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583">Username:</tspan></text>
+        <rect
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:9.6;paint-order:markers stroke fill"
+           id="rect871"
+           width="147.10834"
+           height="15.875003"
+           x="178.44263"
+           y="108.47917"
+           inkscape:label="input text" />
+      </g>
+      <g
+         id="g885"
+         inkscape:label="div">
+        <rect
+           style="fill:#cccccc;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:9.6;paint-order:markers stroke fill"
+           id="rect851"
+           width="210.60834"
+           height="20.108337"
+           x="116.94583"
+           y="132.82083"
+           inkscape:label="box" />
+        <text
+           xml:space="preserve"
+           style="font-size:10.5833px;line-height:1.25;font-family:'Eras Bold ITC';-inkscape-font-specification:'Eras Bold ITC';stroke-width:0.264583"
+           x="120.53619"
+           y="146.60086"
+           id="text869"
+           inkscape:label="label"><tspan
+             sodipodi:role="line"
+             id="tspan867"
+             x="120.53619"
+             y="146.60086"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583">Password:</tspan></text>
+        <rect
+           style="fill:#ffffff;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:9.6;paint-order:markers stroke fill"
+           id="rect873"
+           width="147.10834"
+           height="15.875003"
+           x="178.32921"
+           y="134.9375"
+           sodipodi:insensitive="true"
+           inkscape:label="input password" />
+      </g>
+      <g
+         id="g894"
+         transform="translate(0,-4.2333335)"
+         inkscape:label="button">
+        <rect
+           style="fill:#cccccc;stroke:#000000;stroke-width:1.05833;stroke-linecap:round;stroke-linejoin:round;stroke-dashoffset:9.6;paint-order:markers stroke fill"
+           id="rect853"
+           width="62.441669"
+           height="20.108335"
+           x="191.02916"
+           y="169.8625"
+           inkscape:label="button"
+           rx="1.0583334"
+           ry="1.0583334" />
+        <text
+           xml:space="preserve"
+           style="font-size:10.5833px;line-height:1.25;font-family:'Eras Bold ITC';-inkscape-font-specification:'Eras Bold ITC';stroke-width:0.264583"
+           x="205.58182"
+           y="183.70454"
+           id="text889"
+           inkscape:label="text"><tspan
+             sodipodi:role="line"
+             id="tspan887"
+             x="205.58182"
+             y="183.70454"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.264583">Submit</tspan></text>
+      </g>
+      <text
+         xml:space="preserve"
+         style="font-size:10.5833px;line-height:1.25;font-family:'Eras Bold ITC';-inkscape-font-specification:'Eras Bold ITC';stroke-width:0.264583"
+         x="174.33835"
+         y="212.3432"
+         id="text898"
+         inkscape:label="New User Link"><tspan
+           sodipodi:role="line"
+           id="tspan896"
+           x="174.33835"
+           y="212.3432"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Arial;-inkscape-font-specification:Arial;fill:#0000ff;stroke-width:0.264583">I Don't Have a Login</tspan></text>
+    </g>
+  </g>
+</svg>
