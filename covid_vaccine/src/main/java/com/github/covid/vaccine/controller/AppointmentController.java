@@ -1,5 +1,6 @@
 package com.github.covid.vaccine.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.github.covid.vaccine.model.Appointment;
@@ -40,6 +41,21 @@ public class AppointmentController {
     public List<Appointment> findAllAppointments() {
         return aService.getAppointments();
     }
+
+    @GetMapping("/appointments/distributor/{id}")
+    public List<Appointment> findAppointmentsByDistributor(@PathVariable int id) {
+        List<Appointment> tempApp =aService.getAppointments();
+        List<Appointment> tempApp2 = new ArrayList<>();
+
+        for(Appointment app:tempApp){
+            if(app.getDistributor().getDistributorId() == id){
+                tempApp2.add(app);
+            }
+        }
+        
+        return tempApp2;
+    }
+
 
     @DeleteMapping("/deleteAppointment/{id}")
     public String delete(@PathVariable int id) {
