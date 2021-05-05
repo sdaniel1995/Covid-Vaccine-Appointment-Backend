@@ -42,6 +42,16 @@ public class AppointmentController {
         return aService.getAppointments();
     }
 
+    @PostMapping("/appointments/modify")
+    public void replaceEmployee(@RequestBody Integer[] aptArray) {
+    
+        int patientId = aptArray[0];
+        int aptId = aptArray[1]; 
+    
+       
+        System.out.println("Ne Appointment is: " + aService.updateAppointment(patientId, aptId));
+    }
+  
     @GetMapping("/appointments/distributor/{id}")
     public List<Appointment> findAppointmentsByDistributor(@PathVariable int id) {
         List<Appointment> tempApp =aService.getAppointments();
@@ -51,6 +61,36 @@ public class AppointmentController {
             if(app.getDistributor().getDistributorId() == id){
                 tempApp2.add(app);
             }
+        }
+        
+        return tempApp2;
+    }
+
+    @GetMapping("/appointments/patient/{id}")
+    public List<Appointment> findAppointmentsByPatient(@PathVariable int id) {
+        List<Appointment> tempApp =aService.getAppointments();
+        List<Appointment> tempApp2 = new ArrayList<>();
+
+        for(Appointment app:tempApp){
+            if(app.getPatient() !=null){
+                if(app.getPatient().getId() == id){
+                    tempApp2.add(app);
+                }
+             }
+
+        }
+        
+        return tempApp2;
+    }
+    @GetMapping("/appointments/zipcode/{id}")
+    public List<Appointment> findAppointmentsByZipcode(@PathVariable int id) {
+        List<Appointment> tempApp =aService.getAppointments();
+        List<Appointment> tempApp2 = new ArrayList<>();
+
+        for(Appointment app:tempApp){
+                if(app.getDistributor().getZipcode() == id && app.getPatient()==null){
+                    tempApp2.add(app);
+                }
         }
         
         return tempApp2;
