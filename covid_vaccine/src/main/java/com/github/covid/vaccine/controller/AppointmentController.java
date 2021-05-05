@@ -46,7 +46,14 @@ public class AppointmentController {
         int patientId = aptArray[0];
         int aptId = aptArray[1];
 
-        System.out.println("Ne Appointment is: " + aService.updateAppointment(patientId, aptId));
+        Appointment apt = aService.updateAppointment(patientId, aptId);
+        System.out.println(
+            "━━━━━━ Patient "
+            + apt.getPatient().getFname()
+            + " claimed an appointment on "
+            + apt.getDate()
+            + ". ━━━━━━"
+        );
     }
 
     @GetMapping("/appointments/distributor/{id}")

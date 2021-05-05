@@ -44,11 +44,13 @@ public class VaccineDistributorController {
     @ResponseBody
     public ResponseEntity<Optional<VaccineDistributor>> distibutorLogin(@RequestBody VaccineDistributor vDistributor) {
         Optional<VaccineDistributor> tempDistributor = vService.getDistributorByName(vDistributor.getDistributorName());
-        System.out.println(tempDistributor.get().getDistributorId());
 
         if ((tempDistributor.get().getDistributorName().equals(vDistributor.getDistributorName()))
-                && (tempDistributor.get().getPass().equals(vDistributor.getPass())))
+            && (tempDistributor.get().getPass().equals(vDistributor.getPass()))) {
+                System.out.println("━━━━━━ Distributor " + tempDistributor.get().getDistributorName() + " logged in. ━━━━━━");
             return new ResponseEntity<>(tempDistributor, HttpStatus.OK);
+        }
+            
 
         return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }

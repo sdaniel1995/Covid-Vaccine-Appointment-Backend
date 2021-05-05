@@ -55,12 +55,12 @@ public class PatientController {
     @ResponseBody
     public ResponseEntity<Optional<Patient>> patientLogin(@RequestBody Patient patient) {
         Optional<Patient> tempPatient = pService.getPatientByUsername(patient.getUsername());
-        System.out.println(patient.getId());
 
         if ((tempPatient.get().getUsername().equals(patient.getUsername()))
-                && (tempPatient.get().getPass().equals(patient.getPass())))
+                && (tempPatient.get().getPass().equals(patient.getPass()))) {
+            System.out.println("━━━━━━ Patient " + patient.getUsername() + " logged in. ━━━━━━");
             return new ResponseEntity<>(tempPatient, HttpStatus.OK);
-
+        }
         return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
     }
 }

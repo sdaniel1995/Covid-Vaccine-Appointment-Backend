@@ -1,7 +1,6 @@
 package com.github.covid.vaccine.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.transaction.Transactional;
 
@@ -39,10 +38,7 @@ public class AppointmentService {
     }
 
     public Appointment updateAppointment(Integer patId, Integer aptId) {
-        System.out.println("PAtient id is :" + patId);
-        Optional<Patient> patientOpt = pRepository.findById(patId);
-        Patient patient = patientOpt.get();
-        System.out.println("The patient is " + patient);
+        Patient patient = pRepository.findById(patId).get();
 
         return aRepository.findById(aptId).map(appointment -> {
             appointment.setPatient(patient);
