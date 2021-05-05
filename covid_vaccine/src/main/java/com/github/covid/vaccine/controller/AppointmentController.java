@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.github.covid.vaccine.model.Appointment;
-import com.github.covid.vaccine.model.Patient;
 import com.github.covid.vaccine.service.AppointmentService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -44,67 +42,61 @@ public class AppointmentController {
 
     @PostMapping("/appointments/modify")
     public void replaceEmployee(@RequestBody Integer[] aptArray) {
-    
+
         int patientId = aptArray[0];
-        int aptId = aptArray[1]; 
-    
-       
+        int aptId = aptArray[1];
+
         System.out.println("Ne Appointment is: " + aService.updateAppointment(patientId, aptId));
     }
-  
+
     @GetMapping("/appointments/distributor/{id}")
     public List<Appointment> findAppointmentsByDistributor(@PathVariable int id) {
-        List<Appointment> tempApp =aService.getAppointments();
+        List<Appointment> tempApp = aService.getAppointments();
         List<Appointment> tempApp2 = new ArrayList<>();
 
-        for(Appointment app:tempApp){
-            if(app.getDistributor().getDistributorId() == id){
+        for (Appointment app : tempApp) {
+            if (app.getDistributor().getDistributorId() == id) {
                 tempApp2.add(app);
             }
         }
-        
+
         return tempApp2;
     }
 
     @GetMapping("/appointments/patient/{id}")
     public List<Appointment> findAppointmentsByPatient(@PathVariable int id) {
-        List<Appointment> tempApp =aService.getAppointments();
+        List<Appointment> tempApp = aService.getAppointments();
         List<Appointment> tempApp2 = new ArrayList<>();
 
-        for(Appointment app:tempApp){
-            if(app.getPatient() !=null){
-                if(app.getPatient().getId() == id){
+        for (Appointment app : tempApp) {
+            if (app.getPatient() != null) {
+                if (app.getPatient().getId() == id) {
                     tempApp2.add(app);
                 }
-             }
+            }
 
         }
-        
+
         return tempApp2;
     }
+
     @GetMapping("/appointments/zipcode/{id}")
     public List<Appointment> findAppointmentsByZipcode(@PathVariable int id) {
-        List<Appointment> tempApp =aService.getAppointments();
+        List<Appointment> tempApp = aService.getAppointments();
         List<Appointment> tempApp2 = new ArrayList<>();
 
-        for(Appointment app:tempApp){
-                if(app.getDistributor().getZipcode() == id && app.getPatient()==null){
-                    tempApp2.add(app);
-                }
+        for (Appointment app : tempApp) {
+            if (app.getDistributor().getZipcode() == id && app.getPatient() == null) {
+                tempApp2.add(app);
+            }
         }
-        
+
         return tempApp2;
     }
-
 
     @DeleteMapping("/deleteAppointment/{id}")
     public String delete(@PathVariable int id) {
         return aService.cancelAppointment(id);
     }
 
-    /*@PutMapping("/updateAppointment")
-    public Appointment update(@RequestBody Appointment appointment, @RequestBody Patient patient) {
-        Appointment tempAppointment = aService.findById(appointment.getId());
-        return null;
-    }*/
 }

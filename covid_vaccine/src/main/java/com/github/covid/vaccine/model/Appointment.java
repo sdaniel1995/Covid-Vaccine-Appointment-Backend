@@ -13,7 +13,6 @@ import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
-
 @Entity
 @Table(name = "appointments")
 public class Appointment {
@@ -22,20 +21,19 @@ public class Appointment {
     @Column
     private Integer id;
 
-    
     @Column(nullable = false)
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
 
-     @JsonFormat(pattern = "HH:mm")
-     private LocalTime time;
+    @JsonFormat(pattern = "HH:mm")
+    private LocalTime time;
 
     @OneToOne
-    @JoinColumn(name = "patient_id",nullable = true)
+    @JoinColumn(name = "patient_id", nullable = true)
     private Patient patient;
-    
+
     @OneToOne
-    @JoinColumn(name = "distributor_id",nullable = true)
+    @JoinColumn(name = "distributor_id", nullable = true)
     private VaccineDistributor distributor;
 
     public Appointment() {
@@ -47,8 +45,6 @@ public class Appointment {
         this.patient = patient;
         this.distributor = distributor;
     }
-
-
 
     public Integer getId() {
         return id;
@@ -90,13 +86,10 @@ public class Appointment {
         this.distributor = distributor;
     }
 
-
-
     @Override
     public String toString() {
         return "Appointment [date=" + date + ", distributor=" + distributor + ", id=" + id + ", patient=" + patient
                 + "]";
-    }    
+    }
 
-    
 }

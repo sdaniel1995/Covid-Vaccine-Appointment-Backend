@@ -13,10 +13,10 @@ public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
-    private Integer id; 
+    private Integer id;
 
     @Column(nullable = false)
-    private String fname; 
+    private String fname;
 
     @Column(nullable = false)
     private String lname;
@@ -25,14 +25,14 @@ public class Patient {
     private Integer age;
 
     @Column(nullable = false)
-    private String sex; 
+    private String sex;
 
     @Column(nullable = false)
-    private String username; 
+    private String username;
 
     @Column(name = "password", nullable = false)
     private String pass;
-    
+
     public Patient() {
         age = 26;
     }
@@ -108,5 +108,4 @@ public class Patient {
                 + ", sex=" + sex + ", username=" + username + "]";
     }
 
-    
 }

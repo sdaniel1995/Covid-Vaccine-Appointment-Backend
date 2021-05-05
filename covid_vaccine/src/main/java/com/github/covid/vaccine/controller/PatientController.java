@@ -57,7 +57,8 @@ public class PatientController {
         Optional<Patient> tempPatient = pService.getPatientByUsername(patient.getUsername());
         System.out.println(patient.getId());
 
-        if ((tempPatient.get().getUsername().equals(patient.getUsername())) && (tempPatient.get().getPass().equals(patient.getPass())))
+        if ((tempPatient.get().getUsername().equals(patient.getUsername()))
+                && (tempPatient.get().getPass().equals(patient.getPass())))
             return new ResponseEntity<>(tempPatient, HttpStatus.OK);
 
         return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);

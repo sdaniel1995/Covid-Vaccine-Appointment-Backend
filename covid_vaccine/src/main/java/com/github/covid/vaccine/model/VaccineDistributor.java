@@ -36,8 +36,8 @@ public class VaccineDistributor {
     public VaccineDistributor() {
     }
 
-    public VaccineDistributor(String distributorName, String pass, String address, String city,
-            String countryState, int zipcode) {
+    public VaccineDistributor(String distributorName, String pass, String address, String city, String countryState,
+            int zipcode) {
         this.distributorName = distributorName;
         this.pass = pass;
         this.address = address;
@@ -105,8 +105,8 @@ public class VaccineDistributor {
     @Override
     public String toString() {
         return "VaccineDistributor [city=" + city + ", countryState=" + countryState + ", distributor_id="
-                + distributorId + ", distributor_name=" + distributorName + ", location_address=" + address
-                + ", pass=" + pass + ", zipcode=" + zipcode + "]";
+                + distributorId + ", distributor_name=" + distributorName + ", location_address=" + address + ", pass="
+                + pass + ", zipcode=" + zipcode + "]";
     }
 
 }

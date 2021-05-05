@@ -37,21 +37,18 @@ public class AppointmentService {
         aRepository.deleteById(id);
         return "Appoint with ID: " + id + " has been removed";
     }
-    
-    public Appointment updateAppointment(Integer patId,Integer aptId) {
-        System.out.println("PAtient id is :" + patId);
-        Optional<Patient> patientOpt =pRepository.findById(patId);
-        Patient patient = patientOpt.get();
-        System.out.println("The patient is "+ patient);
 
-        return aRepository.findById(aptId)
-      .map(appointment -> {
-        appointment.setPatient(patient);
-        return aRepository.save(appointment);
-      })
-      .orElseGet(() -> {
-        //newEmployee.setId(id);
-        return null;
-      });
+    public Appointment updateAppointment(Integer patId, Integer aptId) {
+        System.out.println("PAtient id is :" + patId);
+        Optional<Patient> patientOpt = pRepository.findById(patId);
+        Patient patient = patientOpt.get();
+        System.out.println("The patient is " + patient);
+
+        return aRepository.findById(aptId).map(appointment -> {
+            appointment.setPatient(patient);
+            return aRepository.save(appointment);
+        }).orElseGet(() -> {
+            return null;
+        });
     }
 }
