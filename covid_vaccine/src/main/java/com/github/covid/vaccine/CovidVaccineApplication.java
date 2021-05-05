@@ -33,18 +33,18 @@ public class CovidVaccineApplication implements CommandLineRunner{
 
 	@Override
     public void run(String... args){
-		Date date = new Date();
-        System.out.println("**In the run method**");
-        Patient patient = new Patient("Maurice", "Liddy", 30, "male", "admin", "passwd");
-        this.patientRepository.save(patient);
+	// 	// Date date = new Date();
+    //     // System.out.println("**In the run method**");
+    //     // Patient patient = new Patient("Maurice", "Liddy", 30, "male", "admin", "passwd");
+    //     // this.patientRepository.save(patient);
 
-        VaccineDistributor vacdist = new VaccineDistributor("sdfsad", "dsfdf", "sdsds", "sdad", "sddf", 34521);
-        this.vRepository.save(vacdist);
+    //     // VaccineDistributor vacdist = new VaccineDistributor("sdfsad", "dsfdf", "sdsds", "sdad", "sddf", 34521);
+    //     // this.vRepository.save(vacdist);
 
-		Appointment appointment = new Appointment(date, patient, vacdist);
-		this.aRepository.save(appointment);
+	// 	// Appointment appointment = new Appointment(date, patient, vacdist);
+	// 	// this.aRepository.save(appointment);
 
-        System.out.println("**Out of the  the run method**");
+    //     // System.out.println("**Out of the  the run method**");
     }
 
 

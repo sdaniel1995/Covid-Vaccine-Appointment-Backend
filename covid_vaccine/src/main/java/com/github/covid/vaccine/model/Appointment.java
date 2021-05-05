@@ -1,5 +1,7 @@
 package com.github.covid.vaccine.model;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -12,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 
 @Entity
 @Table(name = "appointments")
@@ -22,24 +26,34 @@ public class Appointment {
     private Integer id;
 
     @Column(nullable = false)
-    private Date date;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate date;
+
+     @JsonFormat(pattern = "HH:mm")
+     private LocalTime time;
 
     @OneToOne
-    @JoinColumn(name = "patients_id")
+    @JoinColumn(name = "patient_id",nullable = true)
     private Patient patient;
     
     @OneToOne
-    @JoinColumn(name = "distributor_id")
+    @JoinColumn(name = "distributor_id",nullable = true)
     private VaccineDistributor distributor;
 
     public Appointment() {
     }
 
-    public Appointment(Date date, Patient patient, VaccineDistributor distributor) {
+    
+
+    public Appointment(Integer id, LocalDate date, LocalTime time, Patient patient, VaccineDistributor distributor) {
+        this.id = id;
         this.date = date;
+        this.time = time;
         this.patient = patient;
         this.distributor = distributor;
     }
+
+
 
     public Integer getId() {
         return id;
@@ -49,13 +63,30 @@ public class Appointment {
         this.id = id;
     }
 
-    public Date getDate() {
+   
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+
+
+    public void setDate(LocalDate date) {
         this.date = date;
     }
+
+
+
+    public LocalTime getTime() {
+        return time;
+    }
+
+
+
+    public void setTime(LocalTime time) {
+        this.time = time;
+    }
+
+
 
     public Patient getPatient() {
         return patient;
@@ -73,9 +104,13 @@ public class Appointment {
         this.distributor = distributor;
     }
 
+
+
     @Override
     public String toString() {
         return "Appointment [date=" + date + ", distributor=" + distributor + ", id=" + id + ", patient=" + patient
-                + "]";
-    }    
+                + ", time=" + time + "]";
+    }
+
+  
 }
