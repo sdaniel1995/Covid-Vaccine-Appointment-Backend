@@ -34,6 +34,7 @@ public class Patient {
     private String pass;
     
     public Patient() {
+        age = 26;
     }
 
     public Patient(String fname, String lname, int age, String sex, String username, String pass) {

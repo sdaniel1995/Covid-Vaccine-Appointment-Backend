@@ -32,4 +32,8 @@ public class AppointmentService {
         aRepository.deleteById(id);
         return "Appoint with ID: " + id + " has been removed";
     }
+    
+    public Appointment updateAppointment(Integer id) {
+        return aRepository.findById(id).orElse(null);
+    }
 }

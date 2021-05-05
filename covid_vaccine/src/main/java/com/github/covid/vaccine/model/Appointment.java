@@ -1,8 +1,8 @@
 package com.github.covid.vaccine.model;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +11,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 
 @Entity
@@ -21,8 +23,12 @@ public class Appointment {
     @Column
     private Integer id;
 
+    @JsonFormat(pattern = "MM/dd/yyyy")
     @Column(nullable = false)
-    private Date date;
+    private LocalDate date;
+
+    @JsonFormat(pattern = "hh:mm:ss a")
+    private LocalTime time;
 
     @OneToOne
     @JoinColumn(name = "patients_id")
@@ -35,8 +41,9 @@ public class Appointment {
     public Appointment() {
     }
 
-    public Appointment(Date date, Patient patient, VaccineDistributor distributor) {
+    public Appointment(LocalDate date, LocalTime time, Patient patient, VaccineDistributor distributor) {
         this.date = date;
+        this.time = time;
         this.patient = patient;
         this.distributor = distributor;
     }
@@ -49,12 +56,20 @@ public class Appointment {
         this.id = id;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
+    }
+
+    public LocalTime getTime() {
+        return time;
+    }
+
+    public void setTime(LocalTime time) {
+        this.time = time;
     }
 
     public Patient getPatient() {
@@ -78,4 +93,6 @@ public class Appointment {
         return "Appointment [date=" + date + ", distributor=" + distributor + ", id=" + id + ", patient=" + patient
                 + "]";
     }    
+
+    
 }
