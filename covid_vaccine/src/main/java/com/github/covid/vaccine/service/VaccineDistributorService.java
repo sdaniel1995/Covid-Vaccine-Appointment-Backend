@@ -1,6 +1,7 @@
 package com.github.covid.vaccine.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.github.covid.vaccine.model.VaccineDistributor;
 import com.github.covid.vaccine.repository.VaccineDistributorRepository;
@@ -23,5 +24,9 @@ public class VaccineDistributorService {
 
     public VaccineDistributor getDistributorById(int id) {
         return vRepository.findById(id).orElse(null);
+    }
+
+    public Optional<VaccineDistributor> getDistributorByName(String name) {
+        return vRepository.findByDistributorName(name);
     }
 }

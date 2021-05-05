@@ -1,6 +1,7 @@
 package com.github.covid.vaccine.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.github.covid.vaccine.model.Patient;
 import com.github.covid.vaccine.repository.PatientRepository;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
 public class PatientService {
     @Autowired
     private PatientRepository pRepository;
+
 
     public Patient insertPatient(Patient patient) {
        return pRepository.save(patient);
@@ -27,6 +29,10 @@ public class PatientService {
 
     public Patient getPatientById(int id) {
         return pRepository.findById(id).orElse(null);
+    }
+
+    public Optional<Patient> getPatientByUsername(String username) {
+        return pRepository.findByUsername(username);
     }
 
     public String removePatient(int id) {

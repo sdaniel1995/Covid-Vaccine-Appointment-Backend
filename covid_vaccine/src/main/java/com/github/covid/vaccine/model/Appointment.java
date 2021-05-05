@@ -2,9 +2,6 @@ package com.github.covid.vaccine.model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,6 +22,7 @@ public class Appointment {
     @Column
     private Integer id;
 
+    
     @Column(nullable = false)
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
@@ -43,10 +41,7 @@ public class Appointment {
     public Appointment() {
     }
 
-    
-
-    public Appointment(Integer id, LocalDate date, LocalTime time, Patient patient, VaccineDistributor distributor) {
-        this.id = id;
+    public Appointment(LocalDate date, LocalTime time, Patient patient, VaccineDistributor distributor) {
         this.date = date;
         this.time = time;
         this.patient = patient;
@@ -63,30 +58,21 @@ public class Appointment {
         this.id = id;
     }
 
-   
     public LocalDate getDate() {
         return date;
     }
-
-
 
     public void setDate(LocalDate date) {
         this.date = date;
     }
 
-
-
     public LocalTime getTime() {
         return time;
     }
 
-
-
     public void setTime(LocalTime time) {
         this.time = time;
     }
-
-
 
     public Patient getPatient() {
         return patient;
@@ -109,8 +95,8 @@ public class Appointment {
     @Override
     public String toString() {
         return "Appointment [date=" + date + ", distributor=" + distributor + ", id=" + id + ", patient=" + patient
-                + ", time=" + time + "]";
-    }
+                + "]";
+    }    
 
-  
+    
 }
