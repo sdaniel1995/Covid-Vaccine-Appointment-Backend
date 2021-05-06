@@ -6,6 +6,7 @@ pipeline {
              steps {
                  echo 'Compile project'
                  sh "pwd"
+                 sh "ls"
                  sh "cd covid_vaccine/"
     
     sh "chmod +x gradlew"
