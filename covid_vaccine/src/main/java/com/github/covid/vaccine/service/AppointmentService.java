@@ -47,4 +47,16 @@ public class AppointmentService {
             return null;
         });
     }
+
+    public Appointment removePatientFromAppt(Integer apptId) {
+
+        System.out.println("ENTERED REMOVE APPOINTMENT METHOD");
+
+        return aRepository.findById(apptId).map(appointment -> {
+            appointment.setPatient(null);
+            return aRepository.save(appointment);
+        }).orElseGet(() -> {
+            return null;
+        });
+    }
 }

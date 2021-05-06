@@ -41,7 +41,7 @@ public class AppointmentController {
     }
 
     @PostMapping("/appointments/modify")
-    public void replaceEmployee(@RequestBody Integer[] aptArray) {
+    public void addPatientToAppt(@RequestBody Integer[] aptArray) {
 
         int patientId = aptArray[0];
         int aptId = aptArray[1];
@@ -106,4 +106,16 @@ public class AppointmentController {
         return aService.cancelAppointment(id);
     }
 
+    @PostMapping("/appointments/cancel")
+    public void cancelAppointment(@RequestBody Integer[] aptArray) {
+
+        int id = aptArray[0];
+
+        System.out.println("ENTERED CANCEL APPOINTMENT METHOD");
+
+        Appointment apt = aService.removePatientFromAppt(id);
+        System.out.println(
+            "The appointment is now" + apt
+        );
+    }
 }
