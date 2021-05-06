@@ -6,7 +6,7 @@ pipeline {
              steps {
     echo 'Compile project'
     sh "chmod +x gradlew"
-    sh "./gradlew build"
+    sh "./gradlew bootRun"
 }
         }
         stage('Test') {
