@@ -2,6 +2,15 @@ pipeline {
     agent any
 
     stages {
+         stage('Initialize') {
+             steps {
+                 echo 'init project'
+                 sh "pwd"
+                 sh "ls"
+                 sh "cd covid_vaccine"
+                 sh "ls"
+}
+        }
         stage('Build') {
              steps {
                  echo 'Compile project'
