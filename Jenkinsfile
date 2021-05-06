@@ -7,7 +7,7 @@ pipeline {
                  echo 'Compile project'
                  sh "pwd"
                  sh "ls"
-                 sh "cd covid_vaccine/"
+                 sh "cd covid_vaccine"
                  sh "ls"
     sh "chmod +x gradlew"
     sh "./gradlew build"
