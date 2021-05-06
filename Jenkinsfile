@@ -5,20 +5,18 @@ pipeline {
          stage('Initialize') {
              steps {
                  echo 'init project'
-              dir('covid_vaccine') {
-                  sh'ls -la'
-              }
+             
 }
         }
         stage('Build') {
              steps {
                  echo 'Compile project'
-                 sh "pwd"
-                 sh "ls"
-                 sh "cd covid_vaccine"
-                 sh "ls"
-    sh "chmod +x gradlew"
+                  dir('covid_vaccine') {
+                  sh'ls -la'
+                      sh "chmod +x gradlew"
     sh "./gradlew build"
+              }
+    
 }
         }
         stage('Test') {
