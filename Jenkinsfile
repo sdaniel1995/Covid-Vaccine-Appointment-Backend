@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
              steps {
     echo 'Compile project'
-    sh "./gradlew bootRun"
+    sh "gradle bootRun"
 }
         }
         stage('Test') {
