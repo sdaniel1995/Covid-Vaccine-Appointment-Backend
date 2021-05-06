@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
              steps {
-                 sh "cd .."
+                 sh "cd covid_vaccine/"
     echo 'Compile project'
     sh "chmod +x gradlew"
     sh "./gradlew build"
