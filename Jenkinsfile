@@ -8,6 +8,7 @@ pipeline {
                  sh "pwd"
                  sh "ls"
                  sh "cd covid_vaccine/"
+                 sh "ls"
     
     sh "chmod +x gradlew"
     sh "./gradlew build"
