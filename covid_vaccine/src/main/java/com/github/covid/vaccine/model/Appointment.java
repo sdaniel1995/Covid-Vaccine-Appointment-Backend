@@ -88,8 +88,12 @@ public class Appointment {
 
     @Override
     public String toString() {
-        return "Appointment [date=" + date + ", distributor=" + distributor + ", id=" + id + ", patient=" + patient
-                + "]";
+        return "Appointment [ "
+                        + "id=" + id
+                        + ", date=" + date
+                        + ", time=" + time
+                        + ", distributor=" + distributor
+                        + ", patient=" + patient + " ]";
     }
 
 }

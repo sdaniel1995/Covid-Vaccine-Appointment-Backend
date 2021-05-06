@@ -104,8 +104,14 @@ public class Patient {
 
     @Override
     public String toString() {
-        return "Patient [age=" + age + ", fname=" + fname + ", id=" + id + ", lname=" + lname + ", pass=" + pass
-                + ", sex=" + sex + ", username=" + username + "]";
+        return "Patient [ "
+                + "id=" + id
+                + ", username=" + username
+                + ", pass=" + pass
+                + ", fname=" + fname
+                + ", lname=" + lname
+                + ", age=" + age
+                + ", sex=" + sex + " ]";
     }
 
 }

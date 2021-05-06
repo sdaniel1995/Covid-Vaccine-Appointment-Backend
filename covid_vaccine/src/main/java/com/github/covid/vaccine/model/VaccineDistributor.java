@@ -104,9 +104,14 @@ public class VaccineDistributor {
 
     @Override
     public String toString() {
-        return "VaccineDistributor [city=" + city + ", countryState=" + countryState + ", distributor_id="
-                + distributorId + ", distributor_name=" + distributorName + ", location_address=" + address + ", pass="
-                + pass + ", zipcode=" + zipcode + "]";
+        return "VaccineDistributor [ "
+                        + "distributor_id=" + distributorId
+                        + ", distributor_name=" + distributorName
+                        + ", pass=" + pass
+                        + ", location_address=" + address
+                        + ", city=" + city
+                        + ", countryState=" + countryState
+                        + ", zipcode=" + zipcode + " ]";
     }
 
 }
