@@ -4,8 +4,10 @@ pipeline {
     stages {
         stage('Build') {
              steps {
+                 sh "cd .."
     echo 'Compile project'
-    sh "gradle bootRun"
+    sh "chmod +x gradlew"
+    sh "./gradlew build"
 }
         }
         stage('Test') {
