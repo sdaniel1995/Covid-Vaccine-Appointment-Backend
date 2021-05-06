@@ -5,10 +5,9 @@ pipeline {
          stage('Initialize') {
              steps {
                  echo 'init project'
-                 sh "pwd"
-                 sh "ls"
-                 sh "cd covid_vaccine"
-                 sh "ls"
+              dir('covid_vaccine') {
+                  sh'ls -la'
+              }
 }
         }
         stage('Build') {
