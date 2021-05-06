@@ -1,6 +1,8 @@
 package com.github.covid.vaccine.controller;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.github.covid.vaccine.model.Appointment;
@@ -118,4 +120,18 @@ public class AppointmentController {
             "The appointment is now" + apt
         );
     }
+
+    @GetMapping("/appointments/recent")
+    public List<Appointment> findLatestAppointment() {
+        List<Appointment> appts= aService.getAppointments();
+        Appointment recentAppointment = new Appointment();
+        Collections.sort(appts, Comparator.comparing(obj -> obj.getDate()));
+        recentAppointment = appts.get(0);
+        System.out.println(recentAppointment);
+        appts.clear();
+        appts.add(recentAppointment);
+        return appts;
+    }
+
+
 }
