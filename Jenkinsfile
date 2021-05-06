@@ -4,8 +4,10 @@ pipeline {
     stages {
         stage('Build') {
              steps {
+                 echo 'Compile project'
+                 sh "pwd"
                  sh "cd covid_vaccine/"
-    echo 'Compile project'
+    
     sh "chmod +x gradlew"
     sh "./gradlew build"
 }
