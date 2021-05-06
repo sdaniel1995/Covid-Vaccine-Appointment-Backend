@@ -1,5 +1,5 @@
 CREATE TABLE patients (
-  patients_id serial primary key,
+  patient_id serial primary key,
   fname text not null,
   lname text not null,
   age integer not null,
@@ -18,7 +18,7 @@ CREATE TABLE vaccineDistributor (
 );
 CREATE TABLE appointments (
   appt_id serial primary key,
-  patient_id integer references patients(patients_id),
+  patient_id integer references patients(patient_id),
   vaccineDistributor_id integer references vaccineDistributor(distributor_id),
   appt_date date not null
 );
