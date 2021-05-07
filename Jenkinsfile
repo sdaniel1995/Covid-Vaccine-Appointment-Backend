@@ -6,7 +6,7 @@ pipeline {
              steps {
                  echo 'init project'
                  dir('covid_vaccine'){
-                 sh 'gradle clean'    
+                 sh './gradlew clean'    
                  }
              
 }
