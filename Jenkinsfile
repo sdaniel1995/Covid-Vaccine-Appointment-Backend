@@ -5,7 +5,9 @@ pipeline {
          stage('Initialize') {
              steps {
                  echo 'init project'
-                 sh 'gradle clean'
+                 dir('covid_vaccine'){
+                 sh 'gradle clean'    
+                 }
              
 }
         }
