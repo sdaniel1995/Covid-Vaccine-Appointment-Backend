@@ -1,3 +1,6 @@
+# Prequisites
+   - Have java installed. Click the link for instructions on installation ([java](https://www.oracle.com/java/technologies/javase-downloads.html)).
+
 # Geting Started
 To edit the code do a `git clone https://github.com/javatures/Portfolio-Frontend.git` in gitbash inside the the file folder directory on you local machine where you want the code cloned to.
 - Open VS Code and open the folder.
