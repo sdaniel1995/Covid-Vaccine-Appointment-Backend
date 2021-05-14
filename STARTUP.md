@@ -3,6 +3,7 @@ To edit the code do a `git clone https://github.com/javatures/Portfolio-Frontend
 - Open VS Code and open the folder.
 - Run the following command:
     -`npm install (in a package directory, no arguments):`
+    -j
 
 Install the dependencies in the local node_modules folder.
 
